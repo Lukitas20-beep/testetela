@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bhh5h4ppcl68m"]
+
+[ext_resource type="Texture2D" uid="uid://y3ob0wscuqxm" path="res://icon.svg" id="1_bj1uy"]
+[ext_resource type="Script" uid="uid://byqnvajp2d8er" path="res://menu_principal.gd" id="1_gmcsc"]
+
+[node name="MenuPrincipal" type="Control" unique_id=369793290]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmcsc")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1044997099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1739224648]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1339839868]
+layout_mode = 2
+
+[node name="Icon" type="Sprite2D" parent="MarginContainer/VBoxContainer/TextureRect" unique_id=213192437]
+position = Vector2(411, 142)
+scale = Vector2(-3.9241176, 2.5023763)
+texture = ExtResource("1_bj1uy")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=679111162]
+layout_mode = 2
+text = "INICIAR"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1420006882]
+layout_mode = 2
+text = "OPÇÕES"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1428232654]
+layout_mode = 2
+text = "SAIR
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
